@@ -21,6 +21,12 @@ const Navbar = () => {
                     Home
                 </li>
               </Link>
+              {/* 
+              <Link to="/addrecipe" className = "addrecipe">
+                <li>
+                    NewRecipe
+                </li>
+              </Link> */}
               <Link to="/register" className = "register">
                 <li>
                     Register
@@ -36,9 +42,9 @@ const Navbar = () => {
         <div className="mobile-view">
           {/* hamburget menu start  */}
           <div className="hamburger-menu">
-            <a href="#" onClick={() => setIsMobile(!isMobile)}>
+            <button className="hamburger-btn" onClick={() => setIsMobile(!isMobile)}>
               <GiHamburger />
-            </a>
+            </button>
           </div>
         </div>
       </nav>

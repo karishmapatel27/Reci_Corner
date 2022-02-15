@@ -46,11 +46,8 @@
   font-size: 3.5rem;
 }
 
-.menu-link ul li{
-  font-size: 1.8rem;
-}
-
 .menu-link ul li {
+  font-size: 1.8rem;
   text-transform: capitalize;
   color: rgb(70, 64, 64);
   transition: 0.8s;
@@ -62,25 +59,29 @@
   transition: 0.8s;
 }
 
-.home,
-.register,
-.login{
-  text-decoration: none;
-  padding: 10px 20px;
-  color: rgba(31, 31, 58, 0.7);
-}
-
 li{
   list-style: none;
+}
+
+.home,
+.register,
+.login,
+.addrecipe{
+  text-decoration: none;
+  padding: 10px 20px;
 }
 
 .mobile-view .hamburger-menu{
   display: none;
 }
 
-.hamburger-menu a{
+.hamburger-menu .hamburger-btn{
   color: rgb(51, 136, 11);
+  background-color: transparent;
+  border: none;
 }
+
+
 
 
 @media(max-width: 1080px){
@@ -153,7 +154,7 @@ li{
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
   }
 
   .mobile-menu-link ul li:first-child {

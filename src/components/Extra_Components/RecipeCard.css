@@ -1,0 +1,26 @@
+.recipe-card{
+  padding: 20px 20px;
+}
+
+.card_body{
+  display: flex;
+  justify-content: space-between;
+}
+
+.icons{
+  align-items: center;
+  justify-content:space-evenly;
+  /* padding: 10px 10px; */
+}
+
+.eye,
+.delete,
+.edit{
+  margin: 0px 5px;
+}
+
+.title{
+  align-items: center;
+  justify-content: flex-start;
+  /* padding: 10px; */
+}

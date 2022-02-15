@@ -1,0 +1,72 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "title": "Avo Halloumi Salad",
+      "image_path": "./Image/Avo_HalloumiSalad.jpg",
+      "Preptime": "20 Minutes",
+      "Cookime": "10 Minutes",
+      "No of Servings": 2,
+      "ingredients": {
+        "Avocado": "2",
+        "Red Onion": "half",
+        "Cucumber": "half",
+        "Olive oil": "2 tea spoon",
+        "Tomato": "1",
+        "Salt": "1/4 tea spoom"
+        },
+      "Method": "Step1: Since avocados start browning once they're cut, we're going to prepare everything else first. Toast the pepitas in a large skillet over medium heat, stirring often (don't let them burn!), until they're starting to turn golden on the edges and make little popping noises, about 3 to 5 minutes. Remove the skillet from the heat and stir in the chili powder, olive oil and pinch of salt. Set aside to cool"
+    },
+    {
+      "id": 2,
+      "title": "Turkish Eggs",
+      "image_path": "./Image/Turkish-Eggs.jpg",
+      "Preptime": "20 Minutes",
+      "Cookime": "15 Minutes",
+      "No of Servings": 2,
+      "ingredients": {
+        "Eggs": "2",
+        "Greek Yogurt": "half cup",
+        "Dill": "half table spoon",
+        "Olive oil": "2 tea spoon",
+        "Mint": "10 leaves",
+        "Salt": "1/2 tea spoom"
+        },
+      "Method": "Prepare the yoghurt. Turkish eggs or Cilbir are made with Greek yoghurt combined with fresh herbs and garlic. We use fresh dill and mint for our yoghurt base. Finely chop the dill and mint, add some crushed or grated garlic and combine the ingredients with the Greek yoghurt. Then season with salt and pepper.Poach the eggs. Poaching eggs can sound simple for some and really challenging for others. If you are in the second group, don't worry, getting a perfect poached egg is easier than you think. Fill a deep pot with water and bring it to the boil. Add 1 tablespoon of vinegar and create a vortex. Crack the egg and add it to the middle of the vortex. Cook for three minutes to get the perfect egg with a runny yolk. Remove the egg with a slotted spoon and leave aside while you cook the next egg.Make the chili melted butter. Using a pan, melt unsalted butter. When the butter starts to bubble add the spices. Traditionally, Aleppo peppers are used but for our recipe, we use chilli flakes and smoked paprika. Stir and the sauce will be ready to serve."
+    },
+    {
+      "id": 3,
+      "title": "Avo Salad",
+      "image_path": "./Image/Avo_HalloumiSalad.jpg",
+      "Preptime": "20 Minutes",
+      "Cookime": "10 Minutes",
+      "No of Servings": 2,
+      "ingredients": {
+        "Avocado": "2",
+        "Red Onion": "half",
+        "Pumpkin": "half cup",
+        "Olive oil": "2 tea spoon",
+        "pine nuts": "100 gram",
+        "Salt": "1/4 tea spoom"
+        },
+      "Method": "Step1: Since avocados start browning once they're cut, we're going to prepare everything else first. Toast the pepitas in a large skillet over medium heat, stirring often (don't let them burn!), until they're starting to turn golden on the edges and make little popping noises, about 3 to 5 minutes. Remove the skillet from the heat and stir in the chili powder, olive oil and pinch of salt. Set aside to cool"
+    },
+    {
+      "id": 4,
+      "title": "Chilli Eggs",
+      "image_path": "./Image/Turkish-Eggs.jpg",
+      "Preptime": "20 Minutes",
+      "Cookime": "15 Minutes",
+      "No of Servings": 2,
+      "ingredients": {
+        "eggs": "2",
+        "Red Onion": "half",
+        "Capcicum": "half",
+        "Olive oil": "2 tea spoon",
+        "Chilli flake": "1 tea spoon",
+        "Salt": "1/4 tea spoom"
+        },
+      "Method": "Prepare the yoghurt. Turkish eggs or Cilbir are made with Greek yoghurt combined with fresh herbs and garlic. We use fresh dill and mint for our yoghurt base. Finely chop the dill and mint, add some crushed or grated garlic and combine the ingredients with the Greek yoghurt. Then season with salt and pepper.Poach the eggs. Poaching eggs can sound simple for some and really challenging for others. If you are in the second group, don't worry, getting a perfect poached egg is easier than you think. Fill a deep pot with water and bring it to the boil. Add 1 tablespoon of vinegar and create a vortex. Crack the egg and add it to the middle of the vortex. Cook for three minutes to get the perfect egg with a runny yolk. Remove the egg with a slotted spoon and leave aside while you cook the next egg.Make the chili melted butter. Using a pan, melt unsalted butter. When the butter starts to bubble add the spices. Traditionally, Aleppo peppers are used but for our recipe, we use chilli flakes and smoked paprika. Stir and the sauce will be ready to serve."
+    }
+  ]
+}

@@ -1,10 +1,14 @@
 import React from "react";
 import Navbar from './components/Navbar/Navbar';
-import {BrowserRouter as Router,  Route, Routes, Link} from "react-router-dom"
-import Home  from './pages/Home'
-import  Register  from './pages/Register'
-import  LogIn from "./pages/LogIn"
-import  Footer from './components/Footer'
+import {BrowserRouter as Router,  Route, Routes} from "react-router-dom"
+import Home  from './components/pages/Home'
+import  Register  from './components/pages/Register'
+import  LogIn from "./components/pages/LogIn"
+import  Footer from './components/pages/Footer'
+import AddRecipe from './components/pages/AddRecipe'
+import ViewRecipe from './components/Extra_Components/ViewRecipe'
+import EditRecipe from './components/Extra_Components/EditRecipe'
+
 
 const App = () => {
   return (   
@@ -12,9 +16,13 @@ const App = () => {
       <Navbar />
         <Routes>
           <Route path="/" element={ <Home />} exact />
+          <Route path="/addrecipe" element={ <AddRecipe /> } exact />
+          <Route path="/view/1" element={ <ViewRecipe /> } exact />
+          <Route path="/edit/1" element={ <EditRecipe /> } exact />
           <Route path="/register" element={<Register />} exact />
           <Route path="/login" element={<LogIn />} exact />
-          </Routes>
+        </Routes>
+      <Footer/>
       </Router>
   );
 }

@@ -1,0 +1,7 @@
+.addRecipeContainer{
+  display: flex;
+  margin: 30px 10rem;
+  justify-content: right;
+}
+
+

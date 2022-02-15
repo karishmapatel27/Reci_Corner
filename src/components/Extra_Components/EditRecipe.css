@@ -1,0 +1,21 @@
+.container{
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-rows: 100%;
+  grid-template-columns: 600px, 600px;
+  gap: 60px;
+}
+.addrecipe_form{
+  margin: 100px 0px; 
+  width: 100%;
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.ingredient-list{
+  width: 100%;
+  margin: 133px 0px;
+  grid-row: 1;
+  grid-column: 2;
+}
