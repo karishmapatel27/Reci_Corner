@@ -1,16 +1,22 @@
 import React from 'react'
 import Form from 'react-bootstrap/Form'
-import { Button } from 'react-bootstrap'
+import { Button, Row, Col } from 'react-bootstrap'
 import "./Register.css"
 
 const Register = () => {
   return (
     <div className="register_form">
     <Form>
-      <Form.Group className="mb-3" controlId="formName">
-      <Form.Label>Name</Form.Label>
+    <Row className="mb-3">
+      <Form.Group as={Col} className="mb-3" controlId="firstName">
+      <Form.Label>First Name</Form.Label>
       <Form.Control type="text"/>
       </Form.Group>
+      <Form.Group as={Col} className="mb-3" controlId="lastName">
+      <Form.Label>Last Name</Form.Label>
+      <Form.Control type="text"/>
+      </Form.Group>
+    </Row>
       <Form.Group className="mb-3" controlId="userName">
       <Form.Label>User Name</Form.Label>
       <Form.Control type="text"/>

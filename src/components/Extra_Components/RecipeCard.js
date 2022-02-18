@@ -2,26 +2,29 @@ import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import { Card } from 'react-bootstrap'
 import './RecipeCard.css'
-import { CgEye } from "react-icons/cg";
+// import { CgEye } from "react-icons/cg";
 import { MdDeleteOutline, MdOutlineModeEditOutline } from "react-icons/md"
 import axios from "axios";
 
 const RecipeCard = () => {
-  const [recipes, setRecipe] = useState([])
+  const [recipes, setRecipes] = useState([])
+  
   useEffect(() => {
-      getAllRecipe()
-  })
+      axios.get("http://localhost:3500/recipes")
+      .then((response) => {
+        setRecipes(response.data);
+      })
+  }, [])
+  
+const handleDelete = async (id) => {
+    await axios.delete(`http://localhost:3500/recipes/${id}`);
+    // creating new updated recipe list - updated state 
+    var newRecipe = recipes.filter((item) => {
+      return item.id !== id;
+    })
 
-  async function getAllRecipe(){
-    try{
-      const recipe = await axios.get("http://localhost:3500/recipes");
-      setRecipe(recipe.data);
-    } catch(error){
-      console.log("Oops! something went wrong.")
-    }
-  }
-
-  // const [image, setImage]
+    setRecipes(newRecipe);
+}
 
   return (
     <>
@@ -30,15 +33,16 @@ const RecipeCard = () => {
           return(
           <div className="recipe-card" key={i}>
             <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={recipe.image_path} />
+            <Link to={`/view/${recipe.id}`}>
+            <Card.Img variant="top" src={recipe.image} />
+            </Link>
             <Card.Body className="card_body">
             <div className="title">
             <Card.Title>{recipe.title}</Card.Title>
             </div>
             <div className="icons">
-            <Link to="/view/1"> <CgEye className="eye"/></Link>
-            <Link to="/edit/1"><MdOutlineModeEditOutline className="edit"/></Link>
-            <MdDeleteOutline className="delete"/>
+            <Link to={`/edit/${recipe.id}`}><MdOutlineModeEditOutline className="edit"/></Link>
+            <MdDeleteOutline onClick={() => handleDelete(recipe.id)} className="delete"/>
             </div>
             </Card.Body>
             </Card>
@@ -51,3 +55,5 @@ const RecipeCard = () => {
 }
 
 export default RecipeCard
+
+//<Link to={`/view/${recipe.id}`}> <CgEye className="eye"/></Link>

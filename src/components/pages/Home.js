@@ -1,4 +1,3 @@
-// import api from '../../api/posts'
 import RecipeCard from '../Extra_Components/RecipeCard'
 import { Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
@@ -15,8 +14,8 @@ const Home = () => {
         </Link>
       </div>
       <div>
-          <RecipeCard />
-      </div> 
+            <RecipeCard/>
+      </div>
     </>
   )
 }

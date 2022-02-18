@@ -1,6 +1,6 @@
 .addrecipe_form{
-  margin: 100px 0px; 
-  width: 100%;
-  grid-row: 1;
-  grid-column: 1;
+  margin: 100px 100px; 
+  width: auto;
+  /* grid-row: 1;
+  grid-column: 1; */
 }

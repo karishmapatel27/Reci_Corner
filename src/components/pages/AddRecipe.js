@@ -1,12 +1,11 @@
 import "./AddRecipe.css"
 import AddRecipeForm  from '../Extra_Components/AddRecipeForm'
-import IngredientsTable from '../Extra_Components/IngredientsTable'
+// import IngredientList from "../Extra_Components/IngredientList"
 
 const AddRecipe = () => {
   return (
     <div className="container">
         <AddRecipeForm/>
-        <IngredientsTable/>
     </div>
   )
 }

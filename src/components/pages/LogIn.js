@@ -7,17 +7,14 @@ const LogIn = () => {
   return (
     <div className="login_form">
     <Form>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-      <Form.Label>Email address</Form.Label>
-      <Form.Control type="email" placeholder="Enter email" />
-      <Form.Text className="text-muted">
-        We'll never share your email with anyone else.
-      </Form.Text>
+      <Form.Group className="mb-3" controlId="formUser">
+      <Form.Label>User name</Form.Label>
+      <Form.Control type="email"/>
       </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formBasicPassword">
+      <Form.Group className="mb-3" controlId="formPassword">
         <Form.Label>Password</Form.Label>
-        <Form.Control type="password" placeholder="Password" />
+        <Form.Control type="password"/>
       </Form.Group>
 
       <Button variant="primary" type="submit">

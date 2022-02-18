@@ -1,8 +1,9 @@
 import React from 'react'
 import { Table } from 'react-bootstrap'
 import { MdDeleteOutline } from "react-icons/md"
+import "./IngredientList.css"
 
-const IngredientsTable = () => {
+const IngredientList = () => {
   return (
     <div className="ingredient-list">
     <Table striped bordered hover>
@@ -30,4 +31,4 @@ const IngredientsTable = () => {
   )
 }
 
-export default IngredientsTable
+export default IngredientList
