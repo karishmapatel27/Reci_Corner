@@ -1,6 +1,6 @@
 import React from 'react'
 import Form from 'react-bootstrap/Form'
-import { Button, Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 import "./Register.css"
 
 const Register = () => {
@@ -30,9 +30,9 @@ const Register = () => {
         <Form.Control type="password"/>
       </Form.Group>
 
-      <Button variant="primary" type="submit">
-        Submit
-      </Button>
+      <button className="registerButton" type="submit">
+        Register
+      </button>
     </Form>
     </div>
   )

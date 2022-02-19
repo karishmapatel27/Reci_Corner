@@ -1,7 +1,32 @@
 .addRecipeContainer{
   display: flex;
-  margin: 30px 10rem;
+  margin: 50px 11rem;
   justify-content: right;
 }
+
+.button {
+  border: none;
+  color: white;
+  padding: 14px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 0.3rem;
+}
+
+.addRecipeBtn {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #FEC848;
+}
+
+.addRecipeBtn:hover {
+  background-color: #FEC848;
+  color: white;
+} 
 
 

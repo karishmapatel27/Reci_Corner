@@ -1,26 +1,36 @@
-.recipe-card{
-  padding: 20px 20px;
+.card-container{
+  margin: 50px 10px;
+}
+
+.card{
+  Height: 340px;
 }
 
 .card_body{
-  display: flex;
-  justify-content: space-between;
-}
-
-.icons{
-  align-items: center;
-  justify-content:space-evenly;
-  /* padding: 10px 10px; */
-}
-
-.eye,
-.delete,
-.edit{
-  margin: 0px 5px;
+  display: block;
 }
 
 .title{
+  display: flex;
   align-items: center;
-  justify-content: flex-start;
-  /* padding: 10px; */
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.icons{
+  display: flex;
+  align-items: center;
+  justify-content:flex-end;
+}
+
+
+.delete,
+.edit{
+  margin: 0px 5px;
+  color: #B32B18;
+}
+
+.card-img{
+  height: 220px;
+  max-height: 220px;
 }

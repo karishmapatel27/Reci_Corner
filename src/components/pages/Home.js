@@ -1,5 +1,5 @@
 import RecipeCard from '../Extra_Components/RecipeCard'
-import { Button } from 'react-bootstrap'
+// import { Button} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import "./Home.css"
 
@@ -8,13 +8,13 @@ const Home = () => {
     <>
       <div className="addRecipeContainer">
         <Link to="/addrecipe">
-          <Button variant="outline-success" className="addRecipeBtn"> 
-            Add Recipe
-          </Button>
+            <button className="addRecipeBtn button"> 
+              Add Recipe
+            </button>
         </Link>
       </div>
       <div>
-            <RecipeCard/>
+        <RecipeCard/>
       </div>
     </>
   )
