@@ -1,52 +1,25 @@
 {
-  "recipes": [
+  "recipeVideoLinks": [
     {
       "id": 1,
       "title": "Avo Halloumi Salad",
+      "category": "Healthy",
       "image": "./Image/Avo_HalloumiSalad.jpg",
-      "totalTime": "30 Minutes",
-      "prepTime": "20 Minutes",
-      "cookingTime": "10 Minutes",
-      "noOfServings": "2",
-      "ingredients": [
-        "2 avocados",
-        "1 cucumber",
-        "1/2 tea spoon salt",
-        "1 spoon olive oil"
-      ],
-      "method": "Step1: Since avocados start browning once they're cut, we're going to prepare everything else first. Toast the pepitas in a large skillet over medium heat, stirring often (don't let them burn!), until they're starting to turn golden on the edges and make little popping noises, about 3 to 5 minutes. Remove the skillet from the heat and stir in the chili powder, olive oil and pinch of salt. Set aside to cool"
+      "youTubeUrl": "30 Minutes"
     },
     {
       "id": 2,
-      "title": "Turkish Eggs",
+      "title": "Avo Halloumi Salad",
+      "category": "Healthy",
       "image": "./Image/Turkish-Eggs.jpg",
-      "totalTime": "35 Minutes",
-      "prepTime": "20 Minutes",
-      "cookingTime": "15 Minutes",
-      "noOfServings": "2",
-      "ingredients": [
-        "2 eggs",
-        "1 cup yogurt",
-        "1/2 tea spoon salt",
-        "1 spoon olive oil"
-      ],
-      "method": "Prepare the yoghurt. Turkish eggs or Cilbir are made with Greek yoghurt combined with fresh herbs and garlic. We use fresh dill and mint for our yoghurt base. Finely chop the dill and mint, add some crushed or grated garlic and combine the ingredients with the Greek yoghurt. Then season with salt and pepper.Poach the eggs. Poaching eggs can sound simple for some and really challenging for others. If you are in the second group, don't worry, getting a perfect poached egg is easier than you think. Fill a deep pot with water and bring it to the boil. Add 1 tablespoon of vinegar and create a vortex. Crack the egg and add it to the middle of the vortex. Cook for three minutes to get the perfect egg with a runny yolk. Remove the egg with a slotted spoon and leave aside while you cook the next egg.Make the chili melted butter. Using a pan, melt unsalted butter. When the butter starts to bubble add the spices. Traditionally, Aleppo peppers are used but for our recipe, we use chilli flakes and smoked paprika. Stir and the sauce will be ready to serve."
+      "youTubeUrl": "30 Minutes"
     },
     {
-      "id": 3,
-      "title": "Avo Salad",
-      "image": "./Image/Avo_HalloumiSalad.jpg",
-      "totalTime": "30 Minutes",
-      "prepTime": "20 Minutes",
-      "cookingTime": "10 Minutes",
-      "noOfServings": "2",
-      "ingredients": [
-        "2 avocados",
-        "1 cucumber",
-        "1/2 tea spoon salt",
-        "1 spoon olive oil"
-      ],
-      "method": "Step1: Since avocados start browning once they're cut, we're going to prepare everything else first. Toast the pepitas in a large skillet over medium heat, stirring often (don't let them burn!), until they're starting to turn golden on the edges and make little popping noises, about 3 to 5 minutes. Remove the skillet from the heat and stir in the chili powder, olive oil and pinch of salt. Set aside to cool"
+      "title": "Pasta",
+      "category": "Italian",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2021/04/Pasta-alla-vodka-f1d2e1c.jpg?quality=90&webp=true&resize=300,272",
+      "youTubeUrl": "https://www.youtube.com/watch?v=7h85kgW2Cnc",
+      "id": 4
     }
   ]
 }

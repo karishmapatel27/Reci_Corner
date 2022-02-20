@@ -1,9 +1,10 @@
 .card-container{
   margin: 50px 10px;
+
 }
 
 .card{
-  Height: 340px;
+  Height: 360px;
 }
 
 .card_body{
@@ -20,7 +21,7 @@
 .icons{
   display: flex;
   align-items: center;
-  justify-content:flex-end;
+  justify-content:space-around;
 }
 
 
@@ -34,3 +35,24 @@
   height: 220px;
   max-height: 220px;
 }
+
+.watchRecipeBtn {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #FEC848;
+  padding: 5px 20px;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 2px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 0.3rem;
+}
+
+.watchRecipeBtn:hover {
+  background-color: #FEC848;
+  color: white;
+} 
