@@ -3,6 +3,7 @@ import Form from 'react-bootstrap/Form'
 import { Row, Col } from 'react-bootstrap'
 import "./Register.css"
 import { Link } from "react-router-dom"
+import axios from 'axios';
 
 const Register = () => {
   const[user, setUser] = useState({
@@ -18,14 +19,13 @@ const Register = () => {
       ...user,
       [e.target.name]: e.target.value
     })
-    console.log(user);
   }
 
   async function onFormSubmit(e){
     e.preventDefault()
     try{
-        // await axios.post(`http://localhost:3500/recipeVideoLinks`, recipe);
-        // setRecipe(recipe.data);
+        await axios.post(`http://localhost:8080/api/v1/register`, user);
+        setUser(user.data);
     } catch(error){
         console.log("something went wrong!")
     }

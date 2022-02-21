@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import { Card, Container, Row, Col} from 'react-bootstrap'
-// import recipeContentService from "../../services/recipeContentService"
 import './RecipeCard.css'
 import axios from "axios";
 
@@ -20,13 +19,16 @@ const RecipeCard = () => {
   }, [])
   
 const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:8080/api/v1/recipecontent/${id}`);
-    // creating new updated recipe list - updated state 
+    await axios.delete(`http://localhost:8080/api/v1/delete/${id}`);
     var newRecipe = recipes.filter((item) => {
       return item.id !== id;
     })
 
     setRecipes(newRecipe);
+}
+
+const handleUpdate = async (id) => {
+    await axios.put(`http://localhost:8080/api/v1/recipeContent/${id}`);
 }
 
   return (
@@ -63,5 +65,3 @@ const handleDelete = async (id) => {
 }
 
 export default RecipeCard
-
-//<Link to={`/view/${recipe.id}`}> <CgEye className="eye"/></Link>

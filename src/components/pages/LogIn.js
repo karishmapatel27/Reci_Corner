@@ -4,7 +4,7 @@ import "./Login.css"
 
 const LogIn = () => {
   const[user, setUser] = useState({
-    email: "",
+    userName: "",
     password:"",
     hasLoginFailed: false
   });
@@ -22,7 +22,7 @@ const LogIn = () => {
     try{
         // await axios.post(`http://localhost:3500/recipeVideoLinks`, recipe);
         // setRecipe(recipe.data);
-        if(user.email==="dummy@test.com" && user.password==="testPass"){
+        if(user.userName==="dummyName" && user.password==="testPass"){
             user.hasLoginFailed = true;
         } else{
           console.log("fail");
@@ -38,7 +38,7 @@ const LogIn = () => {
     <Form>
       <Form.Group className="mb-3" controlId="formUser">
       <Form.Label>User name</Form.Label>
-      <Form.Control type="email" name="email" onChange={e => onTextFieldChange(e)}/>
+      <Form.Control type="text" name="userName" onChange={e => onTextFieldChange(e)}/>
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formPassword">

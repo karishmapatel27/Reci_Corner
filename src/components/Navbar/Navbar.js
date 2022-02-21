@@ -10,7 +10,7 @@ const Navbar = () => {
         <div className="logo">
             <h2>
               <span>R</span>eci
-              <span>C</span>orner
+              <span>B</span>ook
             </h2>
         </div>
         <div className={isMobile ? "mobile-menu-link" : "menu-link"}
@@ -21,12 +21,6 @@ const Navbar = () => {
                     Home
                 </li>
               </Link>
-              {/* 
-              <Link to="/addrecipe" className = "addrecipe">
-                <li>
-                    NewRecipe
-                </li>
-              </Link> */}
               <Link to="/register" className = "register">
                 <li>
                     Register
