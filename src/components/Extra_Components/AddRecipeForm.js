@@ -1,16 +1,17 @@
-import React, { useState } from 'react'
-import { Link } from "react-router-dom"
-import Form from 'react-bootstrap/Form'
-import { Button } from 'react-bootstrap'
-import './AddRecipeForm.css'
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import Form from "react-bootstrap/Form";
+import { Button } from "react-bootstrap";
+import "./AddRecipeForm.css";
 import axios from "axios";
 
 const AddRecipeForm = () => {
+  const navigate = useNavigate();
   const[recipe, setRecipe] = useState({
     recipeName: "",
     imageUrl: "",
     category: "",
-    modificaton: "",
+    modification: "",
     youtubeLink: ""
   });
 
@@ -18,8 +19,7 @@ const AddRecipeForm = () => {
     setRecipe({
       ...recipe,
       [e.target.name]: e.target.value
-    })
-    console.log(recipe);
+    });
   }
 
   async function onFormSubmit(e){
@@ -27,8 +27,9 @@ const AddRecipeForm = () => {
     try{
         await axios.post(`http://localhost:8080/api/v1/createRecipeContent`, recipe);
         setRecipe(recipe.data);
+        navigate('/');
     } catch(error){
-        console.log("something went wrong!")
+        console.log("something went wrong!");
     }
   }
 
@@ -49,7 +50,7 @@ const AddRecipeForm = () => {
         </Form.Group>
         <Form.Group className="mb-3" controlId="formModification">
           <Form.Label>Your Modification</Form.Label>
-          <Form.Control type="text" name="modificaton" onChange={e => onTextFieldChange(e)}/>
+          <Form.Control type="text" name="modification" onChange={e => onTextFieldChange(e)}/>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formyouTubeUrl">
           <Form.Label>youtubeLink</Form.Label>

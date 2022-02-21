@@ -2,10 +2,11 @@ import React, { useState } from 'react'
 import Form from 'react-bootstrap/Form'
 import { Row, Col } from 'react-bootstrap'
 import "./Register.css"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import axios from 'axios';
 
 const Register = () => {
+  const navigate = useNavigate();
   const[user, setUser] = useState({
     firstName: "",
     lastName:"",
@@ -26,6 +27,7 @@ const Register = () => {
     try{
         await axios.post(`http://localhost:8080/api/v1/register`, user);
         setUser(user.data);
+        navigate("/login")
     } catch(error){
         console.log("something went wrong!")
     }

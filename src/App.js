@@ -10,7 +10,6 @@ import ViewRecipe from './components/Extra_Components/ViewRecipe'
 import EditRecipe from './components/Extra_Components/EditRecipe'
 import NotFound from './components/Extra_Components/NotFound'
 
-
 const App = () => {
   return (   
       <Router>

@@ -5,8 +5,7 @@ import "./Login.css"
 const LogIn = () => {
   const[user, setUser] = useState({
     userName: "",
-    password:"",
-    hasLoginFailed: false
+    password:""
   });
 
   function onTextFieldChange(e){
@@ -22,12 +21,6 @@ const LogIn = () => {
     try{
         // await axios.post(`http://localhost:3500/recipeVideoLinks`, recipe);
         // setRecipe(recipe.data);
-        if(user.userName==="dummyName" && user.password==="testPass"){
-            user.hasLoginFailed = true;
-        } else{
-          console.log("fail");
-          user.hasLoginFailed = false;
-        }
     } catch(error){
         console.log("something went wrong!")
     }

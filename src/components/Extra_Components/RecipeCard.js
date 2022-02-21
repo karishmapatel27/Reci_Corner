@@ -11,7 +11,6 @@ const RecipeCard = () => {
       axios.get("http://localhost:8080/api/v1/recipeContent")
       .then(response => {
         setRecipes(response.data);
-        console.log(response.data);
       })
       .catch(error => {
         console.log("Something went wrong", error);
@@ -23,12 +22,7 @@ const handleDelete = async (id) => {
     var newRecipe = recipes.filter((item) => {
       return item.id !== id;
     })
-
     setRecipes(newRecipe);
-}
-
-const handleUpdate = async (id) => {
-    await axios.put(`http://localhost:8080/api/v1/recipeContent/${id}`);
 }
 
   return (
