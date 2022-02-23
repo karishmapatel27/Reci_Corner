@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import Form from 'react-bootstrap/Form'
+import axios from 'axios'
 import "./Login.css"
 
-const LogIn = () => {
+const LogIn = ({cookies}) => {
   const[user, setUser] = useState({
     userName: "",
     password:""
@@ -19,8 +20,10 @@ const LogIn = () => {
   async function onFormSubmit(e){
     e.preventDefault()
     try{
-        // await axios.post(`http://localhost:3500/recipeVideoLinks`, recipe);
-        // setRecipe(recipe.data);
+        let result = await axios.post(`http://localhost:8080/api/auth/login`, user);
+        cookies.set("Authorization", `Bearer ${result.data.jwttoken}`)
+        console.log(result.data)
+        setUser(user.data);
     } catch(error){
         console.log("something went wrong!")
     }

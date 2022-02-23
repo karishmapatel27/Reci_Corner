@@ -4,11 +4,17 @@ import { Card, Container, Row, Col} from 'react-bootstrap'
 import './RecipeCard.css'
 import axios from "axios";
 
-const RecipeCard = () => {
+const RecipeCard = ({cookies}) => {
   const [recipes, setRecipes] = useState([])
-  
+
+const config =  {
+    headers: {
+      Authorization: cookies.get("Authorization"),
+    }
+  }
+
   useEffect(() => {
-      axios.get("http://localhost:8080/api/v1/recipeContent")
+      axios.get("http://localhost:8080/api/user/recipeContent", config)
       .then(response => {
         setRecipes(response.data);
       })
@@ -18,7 +24,7 @@ const RecipeCard = () => {
   }, [])
   
 const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:8080/api/v1/delete/${id}`);
+    await axios.delete(`http://localhost:8080/api/user/delete/${id}`, config);
     var newRecipe = recipes.filter((item) => {
       return item.id !== id;
     })

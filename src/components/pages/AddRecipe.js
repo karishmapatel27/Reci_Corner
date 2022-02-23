@@ -1,10 +1,10 @@
 import "./AddRecipe.css"
 import AddRecipeForm  from '../Extra_Components/AddRecipeForm'
 
-const AddRecipe = () => {
+const AddRecipe = ({cookies}) => {
   return (
     <div className="container">
-      <AddRecipeForm/>
+      <AddRecipeForm cookies={cookies}/>
     </div>
   )
 }

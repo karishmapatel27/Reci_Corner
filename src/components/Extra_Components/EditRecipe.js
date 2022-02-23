@@ -6,20 +6,26 @@ import "./EditRecipe.css"
 import axios from "axios";
 
 
-const EditRecipe = () => {
+const EditRecipe = ({cookies}) => {
   const {id} = useParams();
   const navigate = useNavigate();
+
+  const config =  {
+    headers: {
+      Authorization: cookies.get("Authorization"),
+    }
+  }
 
   const[recipe, setRecipe] = useState({
     recipeName: "",
     imageUrl: "",
-    category: "",
+    category: {},
     modification: "",
     youtubeLink: ""
   });
 
   useEffect(() => {
-      axios.get(`http://localhost:8080/api/v1/update/${id}`)
+      axios.get(`http://localhost:8080/api/user/update/${id}`, config)
       .then((response) => {
         setRecipe(response.data);
         console.log(response.data);
@@ -39,7 +45,7 @@ const EditRecipe = () => {
   async function onFormSubmit(e){
     e.preventDefault()
       try{
-          await axios.put(`http://localhost:8080/api/v1/update`, recipe);
+          await axios.put(`http://localhost:8080/api/user/update`, recipe, config);
           setRecipe(recipe);
           navigate("/");
       }catch(error){
@@ -64,7 +70,7 @@ const EditRecipe = () => {
         </Form.Group>
         <Form.Group className="mb-3" controlId="formCategory">
           <Form.Label>Category</Form.Label>
-          <Form.Control type="text" name="category" value={recipe.category} onChange={e => onTextFieldChange(e)}/>
+          <Form.Control type="text" name="category" value={recipe.category.categoryName} onChange={e => onTextFieldChange(e)}/>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formModification">
           <Form.Label>Your Modification</Form.Label>

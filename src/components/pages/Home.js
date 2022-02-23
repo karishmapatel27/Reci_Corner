@@ -2,7 +2,7 @@ import RecipeCard from '../Extra_Components/RecipeCard'
 import { Link } from 'react-router-dom'
 import "./Home.css"
 
-const Home = () => {
+const Home = ({cookies}) => {
   return (
     <>
       <div className="addRecipeContainer">
@@ -13,7 +13,7 @@ const Home = () => {
         </Link>
       </div>
       <div>
-        <RecipeCard/>
+        <RecipeCard cookies={cookies}/>
       </div>
     </>
   )

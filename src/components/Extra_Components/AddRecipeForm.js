@@ -5,8 +5,16 @@ import { Button } from "react-bootstrap";
 import "./AddRecipeForm.css";
 import axios from "axios";
 
-const AddRecipeForm = () => {
+const AddRecipeForm = ({cookies}) => {
   const navigate = useNavigate();
+
+const config =  {
+    headers: {
+      Authorization: cookies.get("Authorization"),
+    }
+  }
+
+
   const[recipe, setRecipe] = useState({
     recipeName: "",
     imageUrl: "",
@@ -25,7 +33,7 @@ const AddRecipeForm = () => {
   async function onFormSubmit(e){
     e.preventDefault()
     try{
-        await axios.post(`http://localhost:8080/api/v1/createRecipeContent`, recipe);
+        await axios.post(`http://localhost:8080/api/user/createRecipeContent`, recipe, config);
         setRecipe(recipe.data);
         navigate('/');
     } catch(error){
@@ -56,11 +64,11 @@ const AddRecipeForm = () => {
           <Form.Label>youtubeLink</Form.Label>
           <Form.Control type="text" name="youtubeLink" onChange={e => onTextFieldChange(e)}/>
         </Form.Group>
-        <Button variant="primary" type="submit" onClick={e => onFormSubmit(e)}>
+        <Button className="addRecipeFormButton" type="submit" onClick={e => onFormSubmit(e)}>
           Add
         </Button>
         <Link to="/">
-          <Button variant="primary">
+          <Button className="addRecipeFormButton">
             Home
           </Button>
         </Link>

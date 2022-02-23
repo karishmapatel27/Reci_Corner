@@ -1,6 +1,24 @@
 .addrecipe_form{
   margin: 100px 100px; 
   width: auto;
-  /* grid-row: 1;
-  grid-column: 1; */
+}
+
+.addRecipeFormButton {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #aabb4d;
+  padding: 14px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 0.3rem;
+}
+
+.addRecipeFormButton:hover {
+  background-color: #aabb4d;
+  color: white;
 }

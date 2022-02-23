@@ -9,18 +9,20 @@ import AddRecipe from './components/pages/AddRecipe'
 import ViewRecipe from './components/Extra_Components/ViewRecipe'
 import EditRecipe from './components/Extra_Components/EditRecipe'
 import NotFound from './components/Extra_Components/NotFound'
+import Cookies from 'universal-cookie'
 
 const App = () => {
+  let cookies = new Cookies();
   return (   
       <Router>
       <Navbar />
         <Routes>
-          <Route path="/" element={ <Home />} exact />
-          <Route path="/addrecipe" element={ <AddRecipe /> } exact />
-          <Route path="/view/:id" element={ <ViewRecipe /> } exact />
-          <Route path="/edit/:id" element={ <EditRecipe /> } exact />
-          <Route path="/register" element={<Register />} exact />
-          <Route path="/login" element={<LogIn />} exact />
+          <Route path="/" element={ <Home cookies={cookies}/>} exact />
+          <Route path="/addrecipe" element={ <AddRecipe cookies={cookies}/>  } exact />
+          <Route path="/view/:id" element={ <ViewRecipe cookies={cookies}/> } exact />
+          <Route path="/edit/:id" element={ <EditRecipe cookies={cookies}/> } exact />
+          <Route path="/register" element={<Register cookies={cookies}/>} exact />
+          <Route path="/login" element={<LogIn cookies={cookies}/>} exact />
           <Route path="*" element={<NotFound/>} />
         </Routes>
       <Footer/>
