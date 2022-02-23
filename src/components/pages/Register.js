@@ -25,9 +25,9 @@ const Register = () => {
   async function onFormSubmit(e){
     e.preventDefault()
     try{
-        await axios.post(`http://localhost:8080/api/v1/register`, user);
+        await axios.post(`/api/auth/register`, user);
         setUser(user.data);
-        navigate("/login")
+        navigate("/")
     } catch(error){
         console.log("something went wrong!")
     }
@@ -59,10 +59,11 @@ const Register = () => {
         <Form.Label>Password</Form.Label>
         <Form.Control type="password" name="password" onChange={e => onTextFieldChange(e)}/>
       </Form.Group>
-      <Link to="/login">
+      <Link to="/">
       <button className="registerButton" type="submit"  onClick={e => onFormSubmit(e)}>
         Register
-      </button></Link>
+      </button>
+      </Link>
     </Form>
     </div>
   )

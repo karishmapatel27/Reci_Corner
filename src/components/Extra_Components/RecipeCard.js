@@ -14,7 +14,7 @@ const config =  {
   }
 
   useEffect(() => {
-      axios.get("http://localhost:8080/api/user/recipeContent", config)
+      axios.get("/api/user/recipeContent", config)
       .then(response => {
         setRecipes(response.data);
       })
@@ -24,7 +24,7 @@ const config =  {
   }, [])
   
 const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:8080/api/user/delete/${id}`, config);
+    await axios.delete(`/api/user/delete/${id}`, config);
     var newRecipe = recipes.filter((item) => {
       return item.id !== id;
     })

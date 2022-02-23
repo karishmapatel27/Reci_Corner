@@ -19,7 +19,7 @@ const ViewRecipe = ({cookies}) => {
   
   useEffect(() => {
       let mounted = true;
-      axios.get(`http://localhost:8080/api/user/recipeContent/${id}`, config)
+      axios.get(`/api/user/recipeContent/${id}`, config)
       .then((response) => {
         if(mounted){
           setRecipe(response.data);

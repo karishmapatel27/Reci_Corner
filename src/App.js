@@ -13,18 +13,34 @@ import Cookies from 'universal-cookie'
 
 const App = () => {
   let cookies = new Cookies();
-  return (   
-      <Router>
-      <Navbar />
+  let routeComponents;
+  if(cookies.get("Authorization")){
+      routeComponents=(
+        
         <Routes>
-          <Route path="/" element={ <Home cookies={cookies}/>} exact />
+          <Route path="/home" element={ <Home cookies={cookies}/>} exact />
           <Route path="/addrecipe" element={ <AddRecipe cookies={cookies}/>  } exact />
           <Route path="/view/:id" element={ <ViewRecipe cookies={cookies}/> } exact />
           <Route path="/edit/:id" element={ <EditRecipe cookies={cookies}/> } exact />
           <Route path="/register" element={<Register cookies={cookies}/>} exact />
-          <Route path="/login" element={<LogIn cookies={cookies}/>} exact />
+          <Route path="/" element={<LogIn cookies={cookies}/>} exact />
           <Route path="*" element={<NotFound/>} />
         </Routes>
+        
+      )
+  } else {
+      routeComponents=(
+        <Routes>
+          <Route path="/register" element={<Register cookies={cookies}/>} exact />
+          <Route path="/" element={<LogIn cookies={cookies}/>} exact />
+          <Route path="*" element={<NotFound/>} />
+        </Routes>
+      )
+  }
+  return (   
+      <Router>
+      <Navbar cookies={cookies} />
+        {routeComponents}
       <Footer/>
       </Router>
   );

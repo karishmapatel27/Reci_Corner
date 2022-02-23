@@ -33,9 +33,9 @@ const config =  {
   async function onFormSubmit(e){
     e.preventDefault()
     try{
-        await axios.post(`http://localhost:8080/api/user/createRecipeContent`, recipe, config);
+        await axios.post(`/api/user/createRecipeContent`, recipe, config);
         setRecipe(recipe.data);
-        navigate('/');
+        navigate('/home');
     } catch(error){
         console.log("something went wrong!");
     }
@@ -67,7 +67,7 @@ const config =  {
         <Button className="addRecipeFormButton" type="submit" onClick={e => onFormSubmit(e)}>
           Add
         </Button>
-        <Link to="/">
+        <Link to="/home">
           <Button className="addRecipeFormButton">
             Home
           </Button>

@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import Form from 'react-bootstrap/Form'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 import "./Login.css"
 
 const LogIn = ({cookies}) => {
   const[user, setUser] = useState({
     userName: "",
-    password:""
+    password:"",
   });
 
   function onTextFieldChange(e){
@@ -20,16 +21,17 @@ const LogIn = ({cookies}) => {
   async function onFormSubmit(e){
     e.preventDefault()
     try{
-        let result = await axios.post(`http://localhost:8080/api/auth/login`, user);
+        let result = await axios.post(`/api/auth/login`, user);
         cookies.set("Authorization", `Bearer ${result.data.jwttoken}`)
-        console.log(result.data)
         setUser(user.data);
+        window.location.href = "/home"
     } catch(error){
-        console.log("something went wrong!")
+        console.log("something went wrong!", error)
     }
   }
 
   return (
+    <>
     <div className="login_form">
     <Form>
       <Form.Group className="mb-3" controlId="formUser">
@@ -46,6 +48,10 @@ const LogIn = ({cookies}) => {
       </button>
     </Form>
     </div>
+    <div className="login_form create_account_link_div">
+      <h5>New user? <Link to="/register" className="link">Create and account</Link></h5>
+    </div>
+    </>
   )
 }
 

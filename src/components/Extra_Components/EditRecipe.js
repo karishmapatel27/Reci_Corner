@@ -25,7 +25,7 @@ const EditRecipe = ({cookies}) => {
   });
 
   useEffect(() => {
-      axios.get(`http://localhost:8080/api/user/update/${id}`, config)
+      axios.get(`api/user/update/${id}`, config)
       .then((response) => {
         setRecipe(response.data);
         console.log(response.data);
@@ -45,16 +45,16 @@ const EditRecipe = ({cookies}) => {
   async function onFormSubmit(e){
     e.preventDefault()
       try{
-          await axios.put(`http://localhost:8080/api/user/update`, recipe, config);
+          await axios.put(`/api/user/update`, recipe, config);
           setRecipe(recipe);
-          navigate("/");
+          navigate("/home");
       }catch(error){
           console.log("something went wrong!", error);
       }
   }
 
   function handleClick() {
-    navigate('/');
+    navigate('/home');
   }
 
   return (
