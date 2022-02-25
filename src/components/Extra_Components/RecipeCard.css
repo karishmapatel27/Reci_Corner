@@ -1,11 +1,17 @@
 .card-container{
   margin: 50px 10px;
-
 }
 
 .card{
-  Height: 360px;
+  Height: 390px;
   margin: 15px 10px;
+  transition: transform .2s;
+}
+
+.card:hover{
+ -ms-transform: scale(1); /* IE 9 */
+  -webkit-transform: scale(1); /* Safari 3-8 */
+  transform: scale(0.97); 
 }
 
 .card_body{
@@ -25,23 +31,16 @@
   justify-content:space-around;
 }
 
-
-.delete,
-.edit{
-  margin: 0px 5px;
-  color: #B32B18;
-}
-
 .card-img{
-  height: 220px;
-  max-height: 220px;
+  height: 250px;
+  max-height: 250px;
 }
 
 .watchRecipeBtn {
   background-color: white; 
   color: black; 
-  border: 2px solid #FEC848;
-  padding: 5px 20px;
+  border: 2px solid #C7271A;
+  padding: 5px 15px;
   width: 100px;
   text-align: center;
   text-decoration: none;
@@ -50,10 +49,22 @@
   margin: 2px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
 }
 
 .watchRecipeBtn:hover {
-  background-color: #FEC848;
+  background-color: #C7271A;
   color: white;
 } 
+
+@media (max-width: 540px) {
+.card-container{
+  display: block;
+  justify-items: center;
+  align-items: center;
+  }
+
+  .card{
+    margin: 15px auto;
+  }
+}

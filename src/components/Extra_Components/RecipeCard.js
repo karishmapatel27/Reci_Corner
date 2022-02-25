@@ -47,11 +47,11 @@ const handleDelete = async (id) => {
                   </div>
                   <div className="icons">
                   <Link to={`/edit/${recipe.id}`}>
-                    <button className="watchRecipeBtn"> 
+                    <button className="watchRecipeBtn updatebtn"> 
                         Update
                     </button>
                   </Link>
-                  <button className="watchRecipeBtn" onClick={() => handleDelete(recipe.id)}>
+                  <button className="watchRecipeBtn deletebtn" onClick={() => handleDelete(recipe.id)}>
                     Delete
                   </button>
                   </div>

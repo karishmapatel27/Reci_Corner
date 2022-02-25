@@ -80,10 +80,10 @@ const EditRecipe = ({cookies}) => {
           <Form.Label>youtubeLink</Form.Label>
           <Form.Control type="text" name="youtubeLink" value={recipe.youtubeLink} onChange={e => onTextFieldChange(e)}/>
         </Form.Group>
-        <Button variant="primary" type="submit" onClick={e => onFormSubmit(e)}>
+        <Button className="editBtn" type="submit" onClick={e => onFormSubmit(e)}>
           Edit
         </Button>
-        <Button variant="primary" onClick={handleClick}>
+        <Button className="editBtn" onClick={handleClick}>
             Home
         </Button>
         </Form>

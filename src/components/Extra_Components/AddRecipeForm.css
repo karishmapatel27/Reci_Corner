@@ -1,13 +1,13 @@
 .addrecipe_form{
   margin: 100px 100px; 
-  width: auto;
+  width: 75%;
 }
 
-.addRecipeFormButton {
+.addrecipe_form .addRecipeFormButton {
   background-color: white; 
   color: black; 
-  border: 2px solid #aabb4d;
-  padding: 14px 30px;
+  border: 2px solid #C7271A;
+  padding: 7px 30px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -18,7 +18,38 @@
   border-radius: 0.3rem;
 }
 
-.addRecipeFormButton:hover {
-  background-color: #aabb4d;
+.addrecipe_form .addRecipeFormButton:hover {
+  background-color: #C7271A;
   color: white;
+  border-color: #C7271A;
+}
+
+@media (max-width: 820px) {
+.addrecipe_form{
+    margin: 100px auto; 
+    width: 85%;
+    display: block;
+    justify-items: center;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+.addrecipe_form{
+    margin: 100px auto; 
+    width: 85%;
+    display: block;
+    justify-items: center;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 540px) {
+.addrecipe_form{
+    margin: 100px auto; 
+    width: 85%;
+    display: block;
+    justify-items: center;
+    font-size: 0.9rem;
+  }
 }

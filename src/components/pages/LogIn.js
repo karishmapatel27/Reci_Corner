@@ -49,7 +49,7 @@ const LogIn = ({cookies}) => {
     </Form>
     </div>
     <div className="login_form create_account_link_div">
-      <h5>New user? <Link to="/register" className="link">Create and account</Link></h5>
+      <h5>New user? <Link to="/register" className="link">Create an account</Link></h5>
     </div>
     </>
   )
