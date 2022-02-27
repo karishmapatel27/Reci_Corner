@@ -1,0 +1,25 @@
+{
+  "recipeVideoLinks": [
+    {
+      "id": 1,
+      "title": "Avo Halloumi Salad",
+      "category": "Healthy",
+      "image": "./Image/Avo_HalloumiSalad.jpg",
+      "youTubeUrl": "30 Minutes"
+    },
+    {
+      "id": 2,
+      "title": "Avo Halloumi Salad",
+      "category": "Healthy",
+      "image": "./Image/Turkish-Eggs.jpg",
+      "youTubeUrl": "30 Minutes"
+    },
+    {
+      "title": "Pasta",
+      "category": "Italian",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2021/04/Pasta-alla-vodka-f1d2e1c.jpg?quality=90&webp=true&resize=300,272",
+      "youTubeUrl": "https://www.youtube.com/watch?v=7h85kgW2Cnc",
+      "id": 4
+    }
+  ]
+}

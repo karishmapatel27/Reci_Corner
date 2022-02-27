@@ -1,0 +1,89 @@
+.register_form{
+  width: 30%;
+  margin: 8% auto;
+}
+
+.registerButton {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #aabb4d;
+  padding: 14px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 0.3rem;
+}
+
+.registerButton:hover {
+  background-color: #aabb4d;
+  color: white;
+} 
+
+@media (max-width: 912px) {
+.register_form{
+    margin: 100px auto; 
+    width: 60%;
+    display: block;
+    justify-items: center;
+    font-size: 1.5rem;
+  }
+
+.registerButton {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 820px) {
+.register_form{
+    margin: 100px auto; 
+    width: 60%;
+    display: block;
+    justify-items: center;
+    font-size: 1.4rem;
+  }
+
+  .registerButton {
+    font-size: 16px;
+  }
+
+  Form{
+    padding: 18px;
+  }
+
+  .loginButton{
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+.register_form{
+    margin: 100px auto; 
+    width: 60%;
+    display: block;
+    justify-items: center;
+    font-size: 1.3rem;
+  }
+
+  Form{
+    padding: 20px;
+  }
+
+  .registerButton{
+    margin-top: 25px;
+  }
+
+}
+
+@media (max-width: 540px) {
+.register_form{
+    margin: 100px auto; 
+    width: 85%;
+    display: block;
+    justify-items: center;
+    font-size: 0.9rem;
+  }
+}
